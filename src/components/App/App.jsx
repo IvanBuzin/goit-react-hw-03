@@ -13,18 +13,26 @@ const userContacts = [
 ];
 
 const localStorageContacts = () => {
-  const ContactsList = localStorage.getItem("contacts");
-  return ContactsList ? JSON.parse(contactsList) : userContacts;
+  const contactsList = localStorage.getItem("contacts");
+  return contactsList ? JSON.parse(contactsList) : userContacts;
 };
 
 export const App = () => {
   const [contacts, setContacts] = useState(localStorageContacts);
   const [search, setSearch] = useState("");
+
   const addContact = (newContact) => {
+    setContacts((currentContact) => {
+      return [...currentContact, newContact];
+    });
+  };
+
+  const deleteContact = (id) => {
     setContacts((currentContact) => {
       return currentContact.filter((contact) => contact.id !== id);
     });
   };
+
   const filteredContact = contacts.filter((contact) =>
     contact.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
   );
