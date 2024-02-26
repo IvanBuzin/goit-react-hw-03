@@ -5,7 +5,7 @@ export const Contact = ({ contacts: { name, number, id }, onDelete }) => {
   const formatNumber = (inputNumber) => {
     const pattern = /(\d{3})(\d{2})(\d{2})/;
     const formatedNumber = inputNumber.replase(pattern, "$1-$2-$3");
-    return formatNumber;
+    return formatedNumber;
   };
   return (
     <div className={css.item}>
@@ -13,6 +13,10 @@ export const Contact = ({ contacts: { name, number, id }, onDelete }) => {
         <p>
           <FaUser className={css.icon} />
           {name}
+        </p>
+        <p>
+          <FaPhoneAlt className={css.user} />
+          {formatNumber(number)}
         </p>
       </div>
       <button className={css.button} type="button" onClick={() => onDelete(id)}>
