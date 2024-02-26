@@ -13,8 +13,8 @@ const userContacts = [
 ];
 
 const localStorageContacts = () => {
-  const contactsList = localStorage.getItem("contacts");
-  return contactsList ? JSON.parse(contactsList) : userContacts;
+  const ContactsList = localStorage.getItem("contacts");
+  return ContactsList ? JSON.parse(ContactsList) : userContacts;
 };
 
 export const App = () => {
