@@ -3,6 +3,7 @@
   padding: 16px;
   border-radius: 8px;
   width: 392px;
+  padding-inline-start: 40px;
 }
 .formInput {
   margin-bottom: 16px;
