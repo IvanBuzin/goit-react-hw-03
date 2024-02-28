@@ -33,7 +33,6 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  padding-inline-start: 40px;
 }
 
 button {
@@ -68,7 +67,12 @@ button:focus-visible {
   }
 }
 
-ul,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 li {
   margin: 0;
   list-style-type: none;
@@ -86,4 +90,7 @@ p {
 
 img {
   display: block;
+}
+div#root {
+  padding: 0 16px;
 }
