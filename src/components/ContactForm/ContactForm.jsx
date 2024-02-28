@@ -31,7 +31,7 @@ export const ContactForm = ({ onAdd }) => {
     >
       <Form className={css.form}>
         <div className={css.formInput}>
-          <label htmlFor={userNameId}>Neme</label>
+          <label htmlFor={userNameId}>Name</label>
           <Field
             className={css.formInputField}
             type="text"
